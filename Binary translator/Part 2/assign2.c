@@ -1,0 +1,486 @@
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <errno.h>
+#include <limits.h>
+#include <stdint.h>
+#include <assert.h>
+
+#define ASSERT              assert
+#define NOT_REACHED()       assert(0)
+#define NOT_IMPLEMENTED()   assert(0)
+#define DPRINT              printf
+
+#define BIT(_v, _b)         (((_v) >> (_b)) & 0x1)
+#define BITS(_v, _l, _h)    (((uint32_t)(_v) << (31-(_h))) >> ((_l)+31-(_h)))
+
+/*********************************************************************
+ *
+ *  ia32DecodeTable
+ *
+ *   The decode table is provided to save you typing. The actual table is
+ *   defined at the bottom of the file due to its size. Each opcode has an
+ *   entry in the table. 2 byte opcodes are encoded as 0x1XX. For example the
+ *   opcode 0x0f 0x83 would be encoded as 0x183. See Figure 2.12b in the text
+ *   for further explaination.
+ *
+ *********************************************************************/
+
+#define IA32_DATA            0       // default
+#define IA32_notimpl         1
+#define IA32_PREFIX          2
+#define IA32_2BYTE           3
+#define IA32_CFLOW           4
+#define IA32_DECODE_TYPE(_d) ((_d) & 0x000f)
+
+/*
+ *  The following defines add extra information on top of the decode type.
+ */
+
+#define IA32_MODRM           0x0010
+#define IA32_IMM8            0x0020   // REL8 also
+#define IA32_IMM32           0x0040   // REL32 also
+
+#define IA32_RET             0x0100
+#define IA32_JCC             0x0200
+#define IA32_JMP             0x0400
+#define IA32_CALL            0x0800
+
+extern unsigned ia32DecodeTable[]; /* see below */
+
+/*********************************************************************
+ *
+ *  IA32Instr
+ *
+ *   Decoded information about a single ia32 instruction.
+ *
+ *********************************************************************/
+
+typedef struct {
+   uint16_t  opcode;
+   uint8_t   len;
+   unsigned  modRM;
+   uint32_t  imm;
+} IA32Instr;
+
+/*********************************************************************
+ *
+ *  IA32Instr
+ *
+ *   Program registers saved on a callout. These must be restored
+ *   when we return to the program.
+ *
+ *     pc - this is the return address of the callout
+ *     retPC - this is only valid if the callout replaced a RET 
+ *             instruction. This will be the return PC the ret
+ *             will jump to.
+ *
+ *********************************************************************/
+
+typedef struct {
+   uint32_t   eflags;
+   uint32_t   edi;
+   uint32_t   esi;
+   uint32_t   ebp;
+   uint32_t   esp;
+   uint32_t   ebx;
+   uint32_t   edx;
+   uint32_t   ecx;
+   uint32_t   eax;
+   void      *pc;
+   void      *retPC;
+} IA32SaveRegs;
+
+/* addresses of asm callout glue code */
+
+extern void* jccCallout;
+extern void* jmpCallout;
+extern void* callCallout;
+extern void* retCallout;
+void *callTarget;
+unsigned char *save;
+
+
+/*********************************************************************
+ *
+ *  ia32Decode
+ *
+ *   Decode an IA32 instruction.
+ *
+ *********************************************************************/
+
+void 
+ia32Decode(uint8_t *ptr, IA32Instr *instr)
+{
+   NOT_IMPLEMENTED();
+}
+
+
+/*********************************************************************
+ *
+ *  callout handlers
+ *
+ *   These get called by asm glue routines.
+ *
+ *********************************************************************/
+
+void
+handleCallCallout(IA32SaveRegs regs)
+{
+   printf("We've entered \"handleCallCallout\" function.\n");
+
+   *(save) = 0x55;
+   *(save + 1) = 0x89;
+   *(save + 2) = 0xe5;
+   *(save + 3) = 0x53;
+   *(save + 4) = 0x83;
+
+   callTarget = save;
+   //NOT_IMPLEMENTED();
+}
+
+void
+handleRetCallout(IA32SaveRegs regs)
+{
+   NOT_IMPLEMENTED();
+}
+
+
+/*********************************************************************
+ *
+ *  StartProfiling, StopProfiling
+ *
+ *   Profiling hooks. This is your place to inspect and modify the profiled
+ *   function.
+ *
+ *********************************************************************/
+
+void
+StartProfiling(void *func)
+{
+   /* inspect/modify func here */
+   save = (unsigned char *)func;
+
+   unsigned char *modified = (unsigned char *)func;
+   *(modified) = 0xe9;           // jmp
+   *(modified + 1) = 0xb4;
+   *(modified + 2) = 0x01;
+   *(modified + 3) = 0x00;
+   *(modified + 4) = 0x00;
+}
+
+
+/*********************************************************************
+ *
+ *  fib, main
+ *
+ *   This is the user program to be profiled.
+ *
+ *********************************************************************/
+
+int fib(int i)
+{
+   if (i <= 1) {
+      return 1;
+   }
+
+   return fib(i-1) + fib(i-2);
+}
+
+int main(int argc, char *argv[])
+{
+   int value;
+   char *end;
+
+   if (argc != 2) {
+      fprintf(stderr, "usage: %s <value>\n", argv[0]);
+      exit(1);
+   }
+
+   value = strtol(argv[1], &end, 10);
+
+   if (((errno == ERANGE) 
+        && ((value == LONG_MAX) || (value == LONG_MIN)))
+       || ((errno != 0) && (value == 0))) {
+      perror("strtol");
+      exit(1);
+   }
+
+   if (end == argv[1]) {
+      fprintf(stderr, "error: %s is not an integer\n", argv[1]);
+      exit(1);
+   }
+
+   if (*end != '\0') {
+      fprintf(stderr, "error: junk at end of parameter: %s\n", end);
+      exit(1);
+   }
+
+   StartProfiling(fib);
+
+   value = fib(value);
+   
+   printf("%d\n", value);
+   exit(0);
+}
+
+unsigned ia32DecodeTable[] = {
+   IA32_MODRM,                  IA32_MODRM,         // 00
+   IA32_MODRM,                  IA32_MODRM,   
+   IA32_IMM8,                   IA32_IMM32,   
+   0,                           0,
+   IA32_MODRM,                  IA32_MODRM,
+   IA32_MODRM,                  IA32_MODRM,   
+   IA32_IMM8,                   IA32_IMM32,   
+   0,                           IA32_2BYTE,
+   IA32_MODRM,                  IA32_MODRM,         // 10
+   IA32_MODRM,                  IA32_MODRM,   
+   IA32_IMM8,                   IA32_IMM32,   
+   0,                           0,
+   IA32_MODRM,                  IA32_MODRM,
+   IA32_MODRM,                  IA32_MODRM,   
+   IA32_IMM8,                   IA32_IMM32,   
+   0,                           0,
+   IA32_MODRM,                  IA32_MODRM,         // 20
+   IA32_MODRM,                  IA32_MODRM,   
+   IA32_IMM8,                   IA32_IMM32,   
+   IA32_PREFIX,                 0,
+   IA32_MODRM,                  IA32_MODRM,
+   IA32_MODRM,                  IA32_MODRM,   
+   IA32_IMM8,                   IA32_IMM32,   
+   0,                           0,
+   IA32_MODRM,                  IA32_MODRM,         // 30
+   IA32_MODRM,                  IA32_MODRM,   
+   IA32_IMM8,                   IA32_IMM32,   
+   IA32_PREFIX,                 0,
+   IA32_MODRM,                  IA32_MODRM,
+   IA32_MODRM,                  IA32_MODRM,   
+   IA32_IMM8,                   IA32_IMM32,   
+   0,                           0,
+   0,                           0,                  // 40
+   0,                           0,
+   0,                           0,
+   0,                           0,
+   0,                           0,
+   0,                           0,
+   0,                           0,
+   0,                           0,
+   0,                           0,                  // 50
+   0,                           0,
+   0,                           0,
+   0,                           0,
+   0,                           0,
+   0,                           0,
+   0,                           0,
+   0,                           0,
+   0,                           0,                  // 60
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_PREFIX,                 IA32_PREFIX,
+   IA32_PREFIX,                 IA32_PREFIX,
+   IA32_IMM32,                  IA32_MODRM | IA32_IMM32,
+   IA32_IMM8,                   IA32_MODRM | IA32_IMM8,
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_CFLOW | IA32_JCC | IA32_IMM8,  IA32_CFLOW | IA32_JCC | IA32_IMM8, // 70
+   IA32_CFLOW | IA32_JCC | IA32_IMM8,  IA32_CFLOW | IA32_JCC | IA32_IMM8,
+   IA32_CFLOW | IA32_JCC | IA32_IMM8,  IA32_CFLOW | IA32_JCC | IA32_IMM8,
+   IA32_CFLOW | IA32_JCC | IA32_IMM8,  IA32_CFLOW | IA32_JCC | IA32_IMM8,
+   IA32_CFLOW | IA32_JCC | IA32_IMM8,  IA32_CFLOW | IA32_JCC | IA32_IMM8,
+   IA32_CFLOW | IA32_JCC | IA32_IMM8,  IA32_CFLOW | IA32_JCC | IA32_IMM8,
+   IA32_CFLOW | IA32_JCC | IA32_IMM8,  IA32_CFLOW | IA32_JCC | IA32_IMM8,
+   IA32_CFLOW | IA32_JCC | IA32_IMM8,  IA32_CFLOW | IA32_JCC | IA32_IMM8,
+   IA32_MODRM | IA32_IMM8,      IA32_MODRM | IA32_IMM32,      // 80
+   IA32_MODRM | IA32_IMM8,      IA32_MODRM | IA32_IMM8,
+   IA32_MODRM,                  IA32_MODRM,
+   IA32_MODRM,                  IA32_MODRM,
+   IA32_MODRM,                  IA32_MODRM,
+   IA32_MODRM,                  IA32_MODRM,
+   IA32_MODRM,                  IA32_MODRM,
+   IA32_MODRM,                  IA32_MODRM,
+   0,                           0,                  // 90
+   0,                           0,
+   0,                           0,
+   0,                           0,
+   0,                           0,
+   0,                           0,
+   0,                           0,
+   0,                           0,
+   IA32_notimpl,                IA32_notimpl,       // a0
+   IA32_notimpl,                IA32_notimpl, 
+   0,                           0,
+   0,                           0,
+   IA32_IMM8,                   IA32_IMM32,
+   0,                           0,
+   0,                           0,
+   0,                           0,
+   IA32_IMM8,                   IA32_IMM8,         // b0
+   IA32_IMM8,                   IA32_IMM8,    
+   IA32_IMM8,                   IA32_IMM8,    
+   IA32_IMM8,                   IA32_IMM8,    
+   IA32_IMM32,                  IA32_IMM32,    
+   IA32_IMM32,                  IA32_IMM32,    
+   IA32_IMM32,                  IA32_IMM32,    
+   IA32_IMM32,                  IA32_IMM32,    
+   IA32_MODRM | IA32_IMM8,      IA32_MODRM | IA32_IMM8,  // c0
+   IA32_notimpl,                IA32_CFLOW | IA32_RET, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_MODRM | IA32_IMM8,      IA32_MODRM | IA32_IMM32,
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl,       // d0
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl,       // e0
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_CFLOW | IA32_CALL | IA32_IMM32,      IA32_notimpl, 
+   IA32_notimpl,                IA32_CFLOW | IA32_JMP | IA32_IMM8, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl,       // f0
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl,       // 100
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl,       // 110
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl,       // 120
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl,       // 130
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl,       // 140
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl,       // 150
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl,       // 160
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl,       // 170
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_CFLOW | IA32_JCC | IA32_IMM32, IA32_CFLOW | IA32_JCC | IA32_IMM32,// 180
+   IA32_CFLOW | IA32_JCC | IA32_IMM32, IA32_CFLOW | IA32_JCC | IA32_IMM32,
+   IA32_CFLOW | IA32_JCC | IA32_IMM32, IA32_CFLOW | IA32_JCC | IA32_IMM32,
+   IA32_CFLOW | IA32_JCC | IA32_IMM32, IA32_CFLOW | IA32_JCC | IA32_IMM32,
+   IA32_CFLOW | IA32_JCC | IA32_IMM32, IA32_CFLOW | IA32_JCC | IA32_IMM32,
+   IA32_CFLOW | IA32_JCC | IA32_IMM32, IA32_CFLOW | IA32_JCC | IA32_IMM32,
+   IA32_CFLOW | IA32_JCC | IA32_IMM32, IA32_CFLOW | IA32_JCC | IA32_IMM32,
+   IA32_CFLOW | IA32_JCC | IA32_IMM32, IA32_CFLOW | IA32_JCC | IA32_IMM32,
+   IA32_notimpl,                IA32_notimpl,       // 190
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl,       // 1a0
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl,       // 1b0
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_MODRM,                  IA32_MODRM,
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_MODRM,                  IA32_MODRM,
+   IA32_notimpl,                IA32_notimpl,       // 1c0
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl,       // 1d0
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl,       // 1e0
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl,       // 1f0
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+   IA32_notimpl,                IA32_notimpl, 
+};
+
+
