@@ -1,0 +1,167 @@
+topscalls:
+
+youtube480:
+# Calls             Syscall             
+--------------------------------------------------------------------------------
+828836              futex
+421446              recvmsg
+323644              epoll_wait
+166170              read
+122706              write
+117418              poll
+90954               sendmsg
+38302               getpid
+29278               writev
+19734               ioctl
+-------------------------
+
+youtube720:
+# Calls             Syscall             
+--------------------------------------------------------------------------------
+870684              futex
+411952              recvmsg
+321116              epoll_wait
+168992              read
+125414              write
+121364              poll
+92830               sendmsg
+37572               getpid
+20282               writev
+18790               gettid
+-------------------------
+
+youtube1080:
+# Calls             Syscall             
+--------------------------------------------------------------------------------
+859323              futex
+500764              recvmsg
+332100              epoll_wait
+220480              read
+170314              poll
+141782              write
+99140               sendmsg
+48028               recvfrom
+37776               getpid
+20738               writev
+-------------------------
+
+smplayer-cctv-480:
+# Calls             Syscall             
+--------------------------------------------------------------------------------
+308374              recvmsg
+141850              futex
+107222              getpid
+95195               poll
+55780               read
+53144               writev
+44916               setitimer
+37694               write
+31234               ioctl
+28630               epoll_wait
+-------------------------
+
+smplayer-cctv-720:
+# Calls             Syscall             
+--------------------------------------------------------------------------------
+288184              recvmsg
+128280              futex
+95324               getpid
+90845               poll
+51524               read
+49268               writev
+42068               setitimer
+35064               write
+29664               ioctl
+26464               epoll_wait
+-------------------------
+
+smplayer-cctv-1080:
+# Calls             Syscall             
+--------------------------------------------------------------------------------
+136985              futex
+113100              recvmsg
+90226               getpid
+53618               poll
+44320               read
+29158               write
+26174               ioctl
+18122               writev
+17036               clock_gettime
+16012               setitimer
+-------------------------
+
+web-utd:
+# Calls             Syscall             
+--------------------------------------------------------------------------------
+1111888             recvmsg
+370061              poll
+298757              futex
+187450              writev
+176224              epoll_wait
+160568              setitimer
+131364              read
+112798              write
+37604               sendmsg
+33790               mprotect
+-------------------------
+
+web-vbaidu-163:
+# Calls             Syscall             
+--------------------------------------------------------------------------------
+1138284             recvmsg
+641878              futex
+483845              poll
+250528              epoll_wait
+245406              read
+211496              write
+145894              writev
+112576              setitimer
+106840              sendmsg
+98000               mprotect
+-------------------------
+
+gimp:
+# Calls             Syscall             
+--------------------------------------------------------------------------------
+401584              recvmsg
+120871              poll
+94284               writev
+72052               epoll_wait
+64088               setitimer
+54738               read
+50010               write
+22383               futex
+10958               ioctl
+9939                procinfo
+-------------------------
+
+pixlr-online:
+# Calls             Syscall             
+--------------------------------------------------------------------------------
+1221323             recvmsg
+398278              poll
+249290              writev
+236502              epoll_wait
+214852              setitimer
+205921              futex
+143830              read
+120860              write
+48390               sendmsg
+47008               getpid
+-------------------------
+
+librewriter:
+# Calls             Syscall             
+--------------------------------------------------------------------------------
+402058              recvmsg
+118105              poll
+85778               writev
+58151               epoll_wait
+54848               setitimer
+49048               read
+48108               write
+32612               epoll_ctl
+12523               futex
+9867                procinfo
+-------------------------
+

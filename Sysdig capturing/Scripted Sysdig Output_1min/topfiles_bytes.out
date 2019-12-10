@@ -1,0 +1,167 @@
+topfiles_bytes:
+
+youtube480:
+Bytes               Filename            
+--------------------------------------------------------------------------------
+1.91M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/5E6DAC32A4F666CEEE9EF25C79176E895419CED2
+1.87M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/1D495222FA30EDB523E0B1CF529396DCA7E16950
+1.76M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/404E623BB943537863DA6C5E50C92DA4BCEC3A7E
+512.33KB            /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/webappsstore.sqlite-wal
+417.59KB            /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/1FDBCBBBE85FECF9FC95D285DFD2E64542A50E67
+394.95KB            /proc/self/mountinfo
+388.69KB            /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/D2F75EF236E3B8B0F6E90D1BEF478BD08F033EB9
+121.85KB            /etc/mailcap
+96.07KB             /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/cookies.sqlite-wal
+64.20KB             /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/storage/permanent/chrome/idb/3870112724rsegmnoittet-es.sqlite
+-------------------------
+
+youtube720:
+Bytes               Filename            
+--------------------------------------------------------------------------------
+1.73M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/1E65D3EC2D6473715879D560F71B4FBC25871F86
+1.72M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/4F43B8E148168835BFAF1CEB8D8AC1B7511BFC6B
+1.68M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/8A064490FF044A2754DC3670C50453E31D7BEE02
+1.64M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/AEDC322268D8445E51BA0DAF7343AC4E4DD36164
+1.62M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/C2532AD0559052538746D99B2DBA6BE59F1B0DF7
+1.54M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/5113ED5CD89BDD880DD15B331D24588C1D71C398
+726.52KB            /proc/self/mountinfo
+428.68KB            /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/storage/permanent/chrome/idb/3870112724rsegmnoittet-es.sqlite
+384.28KB            /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/webappsstore.sqlite-wal
+383.16KB            /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/22711638306F0FD7805D622AA48B3B5D79C388BF
+-------------------------
+
+youtube1080:
+Bytes               Filename            
+--------------------------------------------------------------------------------
+16.88M              /proc/self/mountinfo
+1.74M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/E78BED4E2DBA1828D672C57A137DD13066F9D98B
+1.70M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/847689C9BE25CBC919877EC38D8C2CD96811B5F8
+1.70M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/19B5CDE8750746BCB7F4CB40CF03D88FA4DB1EB4
+1.69M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/89F138C433E25F13807EF448729B4B157972488D
+1.69M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/82F632D7578C8922515953D1B503716EEE00807A
+1.69M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/F334891F6ABAF24451980D35295BC34A376FBC2F
+1.69M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/AC1831044B4D23E54D20E1420316A3F17F30B2B5
+1.67M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/20A56CFC5460B68EAAC1492F89C409A06F725F6C
+1.67M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/9497875FDDFF70B871D460971E9F650CF4FE3499
+-------------------------
+
+smplayer-cctv-480:
+Bytes               Filename            
+--------------------------------------------------------------------------------
+59.06KB             /dev/snd/timer
+32.00KB             /usr/share/icons/DMZ-White/cursors/left_ptr
+32.00KB             /usr/share/icons/DMZ-White/cursors/fleur
+31.99KB             /dev/input/event6
+14.63KB             /proc/self/mountinfo
+13.64KB             /dev/input/event2
+8.00KB              /usr/share/icons/DMZ-White/cursors/bottom_side
+8.00KB              /usr/share/icons/DMZ-White/cursors/left_side
+3.65KB              /run/mount/utab
+3.56KB              /var/lib/snapd/assertions/asserts-v0/serial/generic/generic-classic/6ccb7b33-57a2-4871-9eaf-10244b65ebfc/active
+-------------------------
+
+smplayer-cctv-720:
+Bytes               Filename            
+--------------------------------------------------------------------------------
+56.41KB             /dev/snd/timer
+32.00KB             /usr/share/icons/DMZ-White/cursors/top_side
+29.37KB             /dev/input/event6
+16.00KB             /usr/share/icons/DMZ-White/cursors/left_ptr
+16.00KB             /usr/share/icons/DMZ-White/cursors/right_side
+14.63KB             /proc/self/mountinfo
+8.00KB              /usr/share/icons/DMZ-White/cursors/bottom_side
+8.00KB              /usr/share/icons/DMZ-White/cursors/left_side
+8.00KB              /usr/share/icons/DMZ-White/cursors/bottom_left_corner
+3.65KB              /run/mount/utab
+-------------------------
+
+smplayer-cctv-1080:
+Bytes               Filename            
+--------------------------------------------------------------------------------
+57.16KB             /dev/snd/timer
+16.00KB             /usr/share/icons/DMZ-White/cursors/right_side
+14.63KB             /proc/self/mountinfo
+8.00KB              /usr/share/icons/DMZ-White/cursors/bottom_side
+6.70KB              /dev/input/event6
+3.65KB              /run/mount/utab
+2.25KB              /dev/input/event2
+1.30KB              /etc/hosts
+868B                /etc/fstab
+686B                /proc/self/stat
+-------------------------
+
+web-utd:
+Bytes               Filename            
+--------------------------------------------------------------------------------
+8.50M               /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/places.sqlite-wal
+4.97M               /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/cookies.sqlite-wal
+3.97M               /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/places.sqlite
+2.77M               /tmp/mozilla-temp-704109394 (deleted)
+2.77M               /proc/self/mountinfo
+2.08M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/F285301C50196A90C611306DE81A4170FE2E8EF0
+1.44M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/9579B861BA54FD9AD7B78CA221619A669F016D2C
+1.42M               /proc/self/smaps
+1013.68KB           /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/5E4954707B44E5A4B4ACF5F22B52219A1DCA477F
+961.95KB            /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/5E2768161F011EE92E3B0FC299ADE4F485358C6E
+-------------------------
+
+web-vbaidu-163:
+Bytes               Filename            
+--------------------------------------------------------------------------------
+13.68M              /proc/self/mountinfo
+6.91M               /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/places.sqlite-wal
+6.63M               /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/cookies.sqlite-wal
+4.67M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/30A37EB78228DDC0E4F3EFEF127E7429AA899631
+3.87M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/5A2BBFD73A997D975DB99A93043C9AB42FAC3357
+3.54M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/DD7D92BD650818DAC13EDC4DAF272F901E8E498A
+3.19M               /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/places.sqlite
+1.28M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/index.tmp
+1.11M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/76BB9E5BBBE457B7091F08F65D4C2E123B3BC7C1
+992.00KB            /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/cookies.sqlite
+-------------------------
+
+gimp:
+Bytes               Filename            
+--------------------------------------------------------------------------------
+6.35M               /home/osboxes/Pictures/.goutputstream-PKMFB0
+356.26KB            /usr/share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-reset.svg
+237.12KB            /dev/input/event6
+137.02KB            /usr/share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-wilber-outline.svg
+79.31KB             /home/osboxes/snap/gimp/common/.cache/thumbnails/normal/814d24e82943ec512e811a54eba74802.png
+74.44KB             /usr/share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-wilber-eek.svg
+51.39KB             /home/osboxes/snap/gimp/227/.local/share/icons/Humanity/devices/16/drive-harddisk.svg
+48.33KB             /usr/share/gimp/2.0/icons/Symbolic/scalable/apps/gimp-linked.svg
+48.00KB             /usr/share/icons/DMZ-White/cursors/bottom_side
+42.56KB             /usr/share/gimp/2.0/icons/Symbolic/scalable/apps/list-add.svg
+-------------------------
+
+pixlr-online:
+Bytes               Filename            
+--------------------------------------------------------------------------------
+26.57M              /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/storage/default/https+++pixlr.com/idb/868280182pxi-xrl.sqlite-wal
+9.65M               /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/storage/default/https+++pixlr.com/idb/868280182pxi-xrl.sqlite
+1.47M               /proc/self/smaps
+320.27KB            /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/cookies.sqlite-wal
+307.50KB            /dev/input/event6
+250.47KB            /proc/self/mountinfo
+64.53KB             /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/permissions.sqlite-journal
+64.02KB             /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/permissions.sqlite
+50.56KB             /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/425D9C01CD4457E8A9678C62A80B00BEFE6707CA
+46.24KB             /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/3E7C4864254ED66A15C0FB5955D71BFAB99B9BF6
+-------------------------
+
+librewriter:
+Bytes               Filename            
+--------------------------------------------------------------------------------
+11.92M              /home/osboxes/Documents/Untitled 2.odt
+5.88M               /tmp/lu63877n1e06.tmp/lu63877n1e13.tmp
+5.88M               /tmp/lu63877n1e06.tmp/lu63877n1e0h.tmp
+5.88M               /tmp/lu63877n1e06.tmp/lu63877n1e0i.tmp
+5.88M               /tmp/lu63877n1e06.tmp/lu63877n1e0r.tmp
+5.69M               /usr/lib/libreoffice/share/gallery/sg24.sdg
+5.14M               /tmp/lu63877n1e06.tmp/lu63877n1e0g.tmp
+5.14M               /tmp/lu63877n1e06.tmp/lu63877n1e0k.tmp
+3.68M               /home/osboxes/Pictures/Screenshot from 2019-11-11 20-16-10.png
+2.99M               /tmp/lu63877n1e06.tmp/lu63877n1e11.tmp
+-------------------------
+

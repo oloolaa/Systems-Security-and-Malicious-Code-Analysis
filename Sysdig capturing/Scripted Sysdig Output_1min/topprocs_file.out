@@ -1,0 +1,162 @@
+topprocs_file:
+
+youtube480:
+Bytes               Process             PID                 
+--------------------------------------------------------------------------------
+6.78M               Cache2              4499
+576.33KB            localStorage        4499
+228.59KB            firefox             4499
+96.07KB             mozStorage          4499
+57.66KB             gnome-shell         3612
+56.19KB             alsa-sink-Intel     3623
+48.97KB             IPDL Background     4499
+24.97KB             QuotaManager        4499
+24.28KB             InputThread         3423
+19.13KB             gsd-housekeepin     3748
+-------------------------
+
+youtube720:
+Bytes               Process             PID                 
+--------------------------------------------------------------------------------
+11.63M              Cache2              4499
+609.89KB            DOM                 4499
+460.87KB            IPDL Background     4499
+416.07KB            mozStorage          4499
+405.29KB            StreamTrans         4499
+384.28KB            localStorage        4499
+124.87KB            QuotaManager        4499
+72.09KB             snapd               816
+56.62KB             alsa-sink-Intel     3623
+19.13KB             gsd-housekeepin     3748
+-------------------------
+
+youtube1080:
+Bytes               Process             PID                 
+--------------------------------------------------------------------------------
+52.11M              Cache2              4499
+724.24KB            QuotaManager        4499
+576.36KB            localStorage        4499
+96.07KB             mozStorage          4499
+78.13KB             StreamTrans         4499
+56.94KB             alsa-sink-Intel     3623
+48.97KB             IPDL Background     4499
+40.12KB             DOM                 4499
+19.13KB             gsd-housekeepin     3748
+17.66KB             gnome-shell         3612
+-------------------------
+
+smplayer-cctv-480:
+Bytes               Process             PID                 
+--------------------------------------------------------------------------------
+80.67KB             gnome-shell         3612
+59.06KB             alsa-sink-Intel     3623
+39.19KB             InputThread         3423
+19.13KB             gsd-housekeepin     3748
+6.82KB              acpid               763
+5.43KB              snapd               816
+1.30KB              mpv/demux           5209
+889B                systemd             1
+229B                systemd             3403
+40B                 upowerd             1113
+-------------------------
+
+smplayer-cctv-720:
+Bytes               Process             PID                 
+--------------------------------------------------------------------------------
+88.67KB             gnome-shell         3612
+56.41KB             alsa-sink-Intel     3623
+31.27KB             InputThread         3423
+19.13KB             gsd-housekeepin     3748
+1.62KB              acpid               763
+1.30KB              mpv/demux           5428
+1.20KB              systemd             1
+-------------------------
+
+smplayer-cctv-1080:
+Bytes               Process             PID                 
+--------------------------------------------------------------------------------
+57.16KB             alsa-sink-Intel     3623
+24.67KB             gnome-shell         3612
+19.13KB             gsd-housekeepin     3748
+7.92KB              InputThread         3423
+1.30KB              mpv/demux           5456
+1.12KB              acpid               763
+622B                systemd             1
+40B                 upowerd             1113
+-------------------------
+
+web-utd:
+Bytes               Process             PID                 
+--------------------------------------------------------------------------------
+21.57M              Cache2              5612
+18.54M              mozStorage          5612
+2.77M               MediaPD~oder        5660
+1.53M               StreamTrans         5612
+1004.23KB           firefox             5612
+212.09KB            InputThread         3423
+40.17KB             DOM                 5612
+19.13KB             gsd-housekeepin     3748
+10.86KB             snapd               816
+9.05KB              gnome-shell         3612
+-------------------------
+
+web-vbaidu-163:
+Bytes               Process             PID                 
+--------------------------------------------------------------------------------
+56.54M              Cache2              5612
+18.10M              mozStorage          5612
+864.51KB            localStorage        5612
+145.05KB            InputThread         3423
+53.39KB             DOM                 5612
+30.73KB             DNS                 5612
+21.27KB             StreamTrans         5612
+19.13KB             gsd-housekeepin     3748
+5.39KB              SSL                 5612
+5.03KB              systemd-journal     282
+-------------------------
+
+gimp:
+Bytes               Process             PID                 
+--------------------------------------------------------------------------------
+7.39M               gimp                5927
+242.79KB            InputThread         3423
+57.84KB             gnome-shell         3612
+28.09KB             systemd-journal     282
+19.98KB             gsd-housekeepin     3748
+6.91KB              rs:main             680
+2.47KB              in:imklog           680
+1008B               acpid               763
+913B                systemd             1
+912B                dbus-daemon         3428
+-------------------------
+
+pixlr-online:
+Bytes               Process             PID                 
+--------------------------------------------------------------------------------
+36.13M              IndexedDB           6119
+1.54M               StreamTrans         6119
+661.63KB            Cache2              6119
+448.81KB            mozStorage          6119
+314.18KB            InputThread         3423
+134.59KB            QuotaManager        6119
+48.00KB             firefox             6119
+21.32KB             DOM                 6119
+19.98KB             gsd-housekeepin     3748
+9.32KB              DNS                 6119
+-------------------------
+
+librewriter:
+Bytes               Process             PID                 
+--------------------------------------------------------------------------------
+90.07M              soffice.bin         6387
+237.46KB            systemd             6435
+180.45KB            InputThread         3423
+24.58KB             gnome-shell         3612
+22.62KB             systemd-hostnam     6435
+19.98KB             gsd-housekeepin     3748
+16.78KB             dconf-service       3687
+13.29KB             acpid               763
+4.41KB              dbus-daemon         766
+4.21KB              dbus-daemon         3428
+-------------------------
+

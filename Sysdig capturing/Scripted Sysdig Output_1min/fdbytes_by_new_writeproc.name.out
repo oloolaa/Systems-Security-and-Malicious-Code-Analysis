@@ -1,0 +1,167 @@
+fdbytes_by_new_write proc.name:
+
+youtube480:
+Bytes Write         proc.name           
+--------------------------------------------------------------------------------
+6.68M               Gecko_IOThread
+6.41M               Cache2
+2.03M               Chrome_~dThread
+512.33KB            localStorage
+323.71KB            Xorg
+204.09KB            AudioIPC
+176.00KB            AudioIP~ent
+98.62KB             Compositor
+96.07KB             mozStorage
+77.79KB             gnome-shell
+-------------------------
+
+youtube720:
+Bytes Write         proc.name           
+--------------------------------------------------------------------------------
+11.18M              Gecko_IOThread
+10.91M              Cache2
+2.07M               Chrome_~dThread
+405.17KB            StreamTrans
+384.29KB            localStorage
+224.08KB            mozStorage
+205.64KB            AudioIPC
+177.32KB            AudioIP~ent
+151.56KB            Xorg
+98.95KB             Compositor
+-------------------------
+
+youtube1080:
+Bytes Write         proc.name           
+--------------------------------------------------------------------------------
+35.37M              Cache2
+34.22M              Gecko_IOThread
+2.17M               Chrome_~dThread
+512.37KB            localStorage
+206.78KB            AudioIPC
+178.31KB            AudioIP~ent
+167.83KB            Xorg
+99.44KB             Compositor
+96.07KB             mozStorage
+78.15KB             StreamTrans
+-------------------------
+
+smplayer-cctv-480:
+Bytes Write         proc.name           
+--------------------------------------------------------------------------------
+630.53KB            Xorg
+292.27KB            gnome-shell
+107.77KB            mpv
+86.21KB             mpv/vo
+41.28KB             gdbus
+34.21KB             pulseaudio
+31.45KB             gnome-terminal-
+25.82KB             smplayer
+17.27KB             threaded-ml
+15.05KB             alsa-sink-Intel
+-------------------------
+
+smplayer-cctv-720:
+Bytes Write         proc.name           
+--------------------------------------------------------------------------------
+583.56KB            Xorg
+290.97KB            gnome-shell
+105.54KB            mpv
+77.34KB             mpv/vo
+32.37KB             pulseaudio
+31.49KB             gdbus
+28.82KB             smplayer
+27.17KB             gnome-terminal-
+16.23KB             threaded-ml
+14.36KB             alsa-sink-Intel
+-------------------------
+
+smplayer-cctv-1080:
+Bytes Write         proc.name           
+--------------------------------------------------------------------------------
+222.11KB            Xorg
+107.09KB            mpv
+77.63KB             mpv/vo
+32.67KB             pulseaudio
+27.57KB             gnome-shell
+26.61KB             smplayer
+16.49KB             threaded-ml
+14.41KB             alsa-sink-Intel
+12.89KB             gnome-terminal-
+2.36KB              systemd-resolve
+-------------------------
+
+web-utd:
+Bytes Write         proc.name           
+--------------------------------------------------------------------------------
+15.83M              Gecko_IOThread
+12.67M              mozStorage
+8.56M               Cache2
+2.90M               Xorg
+2.85M               Chrome_~dThread
+1.34M               firefox
+505.30KB            gnome-shell
+108.76KB            Compositor
+78.29KB             gdbus
+72.41KB             Socket
+-------------------------
+
+web-vbaidu-163:
+Bytes Write         proc.name           
+--------------------------------------------------------------------------------
+34.18M              Gecko_IOThread
+19.66M              Chrome_~dThread
+18.88M              Cache2
+13.10M              mozStorage
+2.58M               Xorg
+736.51KB            localStorage
+622.41KB            Socket
+470.41KB            gnome-shell
+287.01KB            firefox
+199.34KB            Compositor
+-------------------------
+
+gimp:
+Bytes Write         proc.name           
+--------------------------------------------------------------------------------
+16.35M              gimp
+3.11M               Xorg
+991.58KB            gnome-shell
+221.89KB            gdbus
+67.10KB             gnome-terminal-
+49.43KB             at-spi2-registr
+6.91KB              rs:main
+6.49KB              dbus-daemon
+4.03KB              InputThread
+3.82KB              ibus-daemon
+-------------------------
+
+pixlr-online:
+Bytes Write         proc.name           
+--------------------------------------------------------------------------------
+11.43M              Chrome_~dThread
+10.76M              IndexedDB
+7.10M               Gecko_IOThread
+3.51M               Xorg
+758.97KB            firefox
+448.81KB            mozStorage
+328.20KB            gnome-shell
+258.90KB            Cache2
+79.79KB             at-spi2-registr
+75.09KB             Web
+-------------------------
+
+librewriter:
+Bytes Write         proc.name           
+--------------------------------------------------------------------------------
+43.10M              soffice.bin
+2.18M               Xorg
+445.91KB            gnome-shell
+340.44KB            gdbus
+53.21KB             dbus-daemon
+40.34KB             gnome-terminal-
+35.61KB             at-spi2-registr
+16.81KB             dconf-service
+10.86KB             systemd
+6.66KB              ibus-daemon
+-------------------------
+

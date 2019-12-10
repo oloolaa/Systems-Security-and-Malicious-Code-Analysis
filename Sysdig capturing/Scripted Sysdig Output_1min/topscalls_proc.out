@@ -1,0 +1,157 @@
+topscalls_proc:
+
+youtube480 proc.name=firefox:
+# Calls             Syscall             
+--------------------------------------------------------------------------------
+53270               recvmsg
+41972               poll
+21582               futex
+9674                read
+818                 mprotect
+692                 stat
+392                 write
+364                 madvise
+210                 mmap
+168                 writev
+-------------------------
+
+youtube720 proc.name=firefox:
+# Calls             Syscall             
+--------------------------------------------------------------------------------
+58574               recvmsg
+47858               poll
+16719               futex
+11680               read
+2700                mprotect
+1208                madvise
+652                 stat
+510                 write
+110                 gettid
+64                  openat
+-------------------------
+
+youtube1080 proc.name=firefox:
+# Calls             Syscall             
+--------------------------------------------------------------------------------
+75598               recvmsg
+64256               poll
+15104               read
+12281               futex
+772                 write
+654                 stat
+354                 madvise
+184                 writev
+136                 mprotect
+61                  procinfo
+-------------------------
+
+smplayer-cctv-480 proc.name=mpv:
+# Calls             Syscall             
+--------------------------------------------------------------------------------
+72216               getpid
+54500               futex
+6366                clock_gettime
+3148                ioctl
+3148                write
+63                  procinfo
+-------------------------
+
+smplayer-cctv-720 proc.name=mpv:
+# Calls             Syscall             
+--------------------------------------------------------------------------------
+62034               getpid
+46222               futex
+6442                clock_gettime
+3002                ioctl
+3002                write
+61                  procinfo
+2                   brk
+-------------------------
+
+smplayer-cctv-1080 proc.name=mpv:
+# Calls             Syscall             
+--------------------------------------------------------------------------------
+65588               getpid
+50275               futex
+6802                clock_gettime
+3046                write
+3046                ioctl
+61                  procinfo
+14                  brk
+-------------------------
+
+web-utd proc.name=firefox:
+# Calls             Syscall             
+--------------------------------------------------------------------------------
+408902              recvmsg
+225534              poll
+58162               writev
+54830               futex
+18980               read
+14270               write
+4496                mprotect
+3180                madvise
+1886                getpid
+1146                stat
+-------------------------
+
+web-vbaidu-163 proc.name=firefox:
+# Calls             Syscall             
+--------------------------------------------------------------------------------
+475062              recvmsg
+315300              poll
+137780              futex
+51346               read
+33342               writev
+27530               write
+7108                madvise
+4016                mprotect
+2558                getpid
+684                 stat
+-------------------------
+
+gimp proc.name=gimp:
+# Calls             Syscall             
+--------------------------------------------------------------------------------
+69966               recvmsg
+39228               poll
+12230               futex
+11974               writev
+3484                write
+2840                stat
+952                 read
+428                 lstat
+414                 openat
+376                 close
+-------------------------
+
+pixlr-online proc.name=firefox:
+# Calls             Syscall             
+--------------------------------------------------------------------------------
+522014              recvmsg
+263544              poll
+92578               writev
+24798               futex
+13388               write
+9192                read
+1412                mprotect
+1350                madvise
+652                 stat
+63                  procinfo
+-------------------------
+
+librewriter proc.name=soffice.bin:
+# Calls             Syscall             
+--------------------------------------------------------------------------------
+163456              recvmsg
+50606               poll
+13202               writev
+9860                pread
+5139                futex
+4918                write
+1946                clock_gettime
+1436                lstat
+1402                stat
+1364                read
+-------------------------
+

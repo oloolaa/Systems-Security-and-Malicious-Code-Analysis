@@ -1,0 +1,137 @@
+topfiles_bytes_write:
+
+youtube480:
+Bytes Write         Filename            
+--------------------------------------------------------------------------------
+1.91M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/5E6DAC32A4F666CEEE9EF25C79176E895419CED2
+1.87M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/1D495222FA30EDB523E0B1CF529396DCA7E16950
+1.76M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/404E623BB943537863DA6C5E50C92DA4BCEC3A7E
+448.33KB            /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/webappsstore.sqlite-wal
+417.59KB            /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/1FDBCBBBE85FECF9FC95D285DFD2E64542A50E67
+388.69KB            /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/D2F75EF236E3B8B0F6E90D1BEF478BD08F033EB9
+96.07KB             /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/cookies.sqlite-wal
+64.00KB             /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/webappsstore.sqlite
+31.58KB             /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/prefs-1.js
+22.99KB             /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/C6C5EA9AF98B29AA8A5DD8A36D89FCD3FF5357A9
+-------------------------
+
+youtube720:
+Bytes Write         Filename            
+--------------------------------------------------------------------------------
+1.73M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/1E65D3EC2D6473715879D560F71B4FBC25871F86
+1.72M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/4F43B8E148168835BFAF1CEB8D8AC1B7511BFC6B
+1.68M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/8A064490FF044A2754DC3670C50453E31D7BEE02
+1.64M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/AEDC322268D8445E51BA0DAF7343AC4E4DD36164
+1.62M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/C2532AD0559052538746D99B2DBA6BE59F1B0DF7
+1.54M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/5113ED5CD89BDD880DD15B331D24588C1D71C398
+384.28KB            /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/webappsstore.sqlite-wal
+383.16KB            /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/22711638306F0FD7805D622AA48B3B5D79C388BF
+378.24KB            /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/1A4338AC409616DFD40B156274D2F269F43BD69A
+373.57KB            /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/activity-stream.discovery_stream.json.tmp
+-------------------------
+
+youtube1080:
+Bytes Write         Filename            
+--------------------------------------------------------------------------------
+1.74M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/E78BED4E2DBA1828D672C57A137DD13066F9D98B
+1.70M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/847689C9BE25CBC919877EC38D8C2CD96811B5F8
+1.70M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/19B5CDE8750746BCB7F4CB40CF03D88FA4DB1EB4
+1.69M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/89F138C433E25F13807EF448729B4B157972488D
+1.69M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/82F632D7578C8922515953D1B503716EEE00807A
+1.69M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/F334891F6ABAF24451980D35295BC34A376FBC2F
+1.69M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/AC1831044B4D23E54D20E1420316A3F17F30B2B5
+1.67M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/20A56CFC5460B68EAAC1492F89C409A06F725F6C
+1.67M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/9497875FDDFF70B871D460971E9F650CF4FE3499
+1.66M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/FC18A73944AA43FB31FB076E557EC7786B0FD042
+-------------------------
+
+smplayer-cctv-480:
+Bytes Write         Filename            
+--------------------------------------------------------------------------------
+-------------------------
+
+smplayer-cctv-720:
+Bytes Write         Filename            
+--------------------------------------------------------------------------------
+-------------------------
+
+smplayer-cctv-1080:
+Bytes Write         Filename            
+--------------------------------------------------------------------------------
+-------------------------
+
+web-utd:
+Bytes Write         Filename            
+--------------------------------------------------------------------------------
+6.04M               /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/places.sqlite-wal
+4.13M               /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/cookies.sqlite-wal
+1.41M               /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/places.sqlite
+866.20KB            /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/index.tmp
+864.00KB            /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/cookies.sqlite
+696.31KB            /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/7805B2A0025648BE58E968FE55FD415D728FF0A7
+552.96KB            /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/750343797EF43AB0F2E1FF1125EE27DB30B969AF
+531.98KB            /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/536CE4BB9899C4FF2E4BA3B5558C45C04D8E8BAE
+524.81KB            /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/93354968DD67BC18B7A2DEC87A00C2C15ABD8A30
+473.99KB            /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/B32DB7C7CF1C9A0D7023456E6547636F0545C71C
+-------------------------
+
+web-vbaidu-163:
+Bytes Write         Filename            
+--------------------------------------------------------------------------------
+5.66M               /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/cookies.sqlite-wal
+4.69M               /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/places.sqlite-wal
+1.38M               /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/places.sqlite
+1.28M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/index.tmp
+1.01M               /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/DD7D92BD650818DAC13EDC4DAF272F901E8E498A
+992.00KB            /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/cookies.sqlite
+654.17KB            /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/3571C53B7CB93768E629E5E8A3D6AB91C8FD1A9B
+623.33KB            /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/2ECBC04ADE16CB0A2B44BF60F8400CAAEEBFF3A8
+608.51KB            /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/webappsstore.sqlite-wal
+383.98KB            /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/0DDFBE53E33EA5C3F213C49DC83CF5D818939933
+-------------------------
+
+gimp:
+Bytes Write         Filename            
+--------------------------------------------------------------------------------
+6.35M               /home/osboxes/Pictures/.goutputstream-PKMFB0
+21.93KB             /home/osboxes/snap/gimp/common/.cache/thumbnails/normal/gimp-thumb-5927-814d24e8
+4.10KB              /var/log/syslog
+2.81KB              /var/log/kern.log
+1.49KB              /home/osboxes/snap/gimp/227/.local/share/recently-used.xbel.8M4TB0
+1.38KB              /home/osboxes/.local/share/gnome-shell/.goutputstream-XTEGB0
+577B                /sys/kernel/security/apparmor/.access
+352B                /home/osboxes/snap/gimp/227/.config/GIMP/2.10/filters/.goutputstream-ABKHB0
+352B                /home/osboxes/snap/gimp/227/.config/GIMP/2.10/filters/GimpGegl-gegl-tile-paper-config.settings
+303B                /home/osboxes/snap/gimp/227/.config/GIMP/2.10/filters/GimpGegl-gegl-pixelize-config.settings
+-------------------------
+
+pixlr-online:
+Bytes Write         Filename            
+--------------------------------------------------------------------------------
+7.52M               /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/storage/default/https+++pixlr.com/idb/868280182pxi-xrl.sqlite-wal
+3.24M               /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/storage/default/https+++pixlr.com/idb/868280182pxi-xrl.sqlite
+320.27KB            /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/cookies.sqlite-wal
+64.53KB             /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/permissions.sqlite-journal
+64.00KB             /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/permissions.sqlite
+30.75KB             /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/datareporting/aborted-session-ping.tmp
+29.40KB             /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/425D9C01CD4457E8A9678C62A80B00BEFE6707CA
+27.24KB             /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/3E7C4864254ED66A15C0FB5955D71BFAB99B9BF6
+27.21KB             /home/osboxes/.cache/mozilla/firefox/tinqc8lw.default-release/cache2/entries/F09EE6BD9C06FA6E68F96B0735E202D5E307EDB4
+21.32KB             /home/osboxes/.mozilla/firefox/tinqc8lw.default-release/sessionstore-backups/recovery.jsonlz4.tmp
+-------------------------
+
+librewriter:
+Bytes Write         Filename            
+--------------------------------------------------------------------------------
+4.47M               /home/osboxes/Documents/Untitled 2.odt
+2.98M               /home/osboxes/.config/libreoffice/4/user/backup/Untitled 20.odt
+1.50M               /tmp/lu63877n1e06.tmp/lu63877n1e11.tmp
+1.50M               /tmp/lu63877n1e06.tmp/lu63877n1e0p.tmp
+1.49M               /tmp/lu63877n1e06.tmp/lu63877n1e17.tmp
+1.49M               /tmp/lu63877n1e06.tmp/lu63877n1e0u.tmp
+1.49M               /tmp/lu63877n1e06.tmp/lu63877n1e0e.tmp
+1.49M               /tmp/lu63877n1e06.tmp/lu63877n1e0n.tmp
+1.47M               /tmp/lu63877n1e06.tmp/lu63877n1e0k.tmp
+1.47M               /tmp/lu63877n1e06.tmp/lu63877n1e0r.tmp
+-------------------------
+

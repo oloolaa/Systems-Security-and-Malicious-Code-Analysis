@@ -1,0 +1,167 @@
+fdbytes_by_new_read proc.name:
+
+youtube480:
+Bytes Read          proc.name           
+--------------------------------------------------------------------------------
+7.58M               Chrome_~dThread
+6.30M               Socket
+1.15M               Gecko_IOThread
+381.38KB            Cache2
+317.07KB            firefox
+215.34KB            AudioIP~ent
+200.29KB            Xorg
+198.22KB            gnome-shell
+177.75KB            AudioIPC
+70.55KB             alsa-sink-Intel
+-------------------------
+
+youtube720:
+Bytes Read          proc.name           
+--------------------------------------------------------------------------------
+12.09M              Chrome_~dThread
+10.72M              Socket
+1.18M               Gecko_IOThread
+736.28KB            Cache2
+609.89KB            DOM
+460.87KB            IPDL Background
+216.88KB            AudioIP~ent
+192.00KB            mozStorage
+179.09KB            AudioIPC
+124.87KB            QuotaManager
+-------------------------
+
+youtube1080:
+Bytes Read          proc.name           
+--------------------------------------------------------------------------------
+35.14M              Chrome_~dThread
+33.55M              Socket
+16.75M              Cache2
+1.27M               Gecko_IOThread
+724.24KB            QuotaManager
+218.06KB            AudioIP~ent
+180.09KB            AudioIPC
+124.28KB            firefox
+119.25KB            Xorg
+71.49KB             alsa-sink-Intel
+-------------------------
+
+smplayer-cctv-480:
+Bytes Read          proc.name           
+--------------------------------------------------------------------------------
+6.49M               mpv/demux
+478.30KB            gnome-shell
+405.64KB            Xorg
+149.29KB            mpv/vo
+113.22KB            smplayer
+76.21KB             alsa-sink-Intel
+52.55KB             Qt
+40.36KB             gnome-terminal-
+39.38KB             gdbus
+39.28KB             InputThread
+-------------------------
+
+smplayer-cctv-720:
+Bytes Read          proc.name           
+--------------------------------------------------------------------------------
+15.58M              mpv/demux
+458.94KB            gnome-shell
+400.06KB            Xorg
+140.53KB            mpv/vo
+110.25KB            smplayer
+72.52KB             alsa-sink-Intel
+52.55KB             Qt
+38.28KB             QXcbEventReader
+32.30KB             pulseaudio
+31.34KB             InputThread
+-------------------------
+
+smplayer-cctv-1080:
+Bytes Read          proc.name           
+--------------------------------------------------------------------------------
+14.72M              mpv/demux
+137.25KB            Xorg
+110.01KB            smplayer
+102.23KB            mpv/vo
+95.01KB             gnome-shell
+73.53KB             alsa-sink-Intel
+52.55KB             Qt
+32.63KB             pulseaudio
+31.14KB             QXcbEventReader
+19.13KB             gsd-housekeepin
+-------------------------
+
+web-utd:
+Bytes Read          proc.name           
+--------------------------------------------------------------------------------
+15.83M              Chrome_~dThread
+13.01M              Cache2
+5.88M               mozStorage
+5.19M               Socket
+3.16M               Web Content
+2.85M               Gecko_IOThread
+2.77M               MediaPD~oder
+1.49M               StreamTrans
+1.23M               WebExtensions
+1.20M               firefox
+-------------------------
+
+web-vbaidu-163:
+Bytes Read          proc.name           
+--------------------------------------------------------------------------------
+37.66M              Cache2
+34.19M              Chrome_~dThread
+19.67M              Gecko_IOThread
+9.64M               Socket
+5.00M               mozStorage
+909.00KB            Xorg
+829.33KB            gnome-shell
+799.10KB            firefox
+525.74KB            Web
+378.43KB            Web Content
+-------------------------
+
+gimp:
+Bytes Read          proc.name           
+--------------------------------------------------------------------------------
+10.91M              Xorg
+2.21M               gnome-shell
+1.27M               gimp
+243.82KB            InputThread
+201.07KB            gdbus
+99.10KB             gnome-terminal-
+54.68KB             seahorse
+54.68KB             gnome-calendar
+49.92KB             dbus-daemon
+47.13KB             nautilus-deskto
+-------------------------
+
+pixlr-online:
+Bytes Read          proc.name           
+--------------------------------------------------------------------------------
+25.37M              IndexedDB
+11.43M              Gecko_IOThread
+7.11M               Chrome_~dThread
+2.79M               StreamTrans
+1.94M               Web Content
+1.68M               firefox
+1.01M               Xorg
+879.52KB            WebExtensions
+738.01KB            gnome-shell
+402.80KB            Cache2
+-------------------------
+
+librewriter:
+Bytes Read          proc.name           
+--------------------------------------------------------------------------------
+55.79M              soffice.bin
+8.46M               Xorg
+1.02M               gnome-shell
+310.22KB            gdbus
+242.79KB            systemd
+181.03KB            InputThread
+78.78KB             dbus-daemon
+62.35KB             gnome-terminal-
+44.67KB             nautilus-deskto
+34.90KB             gsd-power
+-------------------------
+
